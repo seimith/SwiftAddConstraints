@@ -58,6 +58,36 @@ class ViewController: UIViewController {
                                width: 100,
                                fixedWidth: true,
                                selfView: self)
+
+        // ==================================================
+        
+        let myYellowUIView = UIView()
+        myYellowUIView.backgroundColor = UIColor.yellow
+
+        let myOrangeUIView = UIView()
+        myOrangeUIView.backgroundColor = UIColor.orange
+        
+        let myBlueUIView = UIView()
+        myBlueUIView.backgroundColor = UIColor.blue
+        
+        Stack.setupConstraints(views: [myYellowUIView, myOrangeUIView, myBlueUIView],
+                               axis: .horizontal,
+                               distribution: .fill,
+                               alignment: .leading,
+                               spacing: 20,
+                               selfView: self,
+                               parentContainer: myYellowUIView)
+        
+        Layout.setupConstraint(forView: myYellowUIView,
+                                top: 50,
+                                //bottom: nil,
+                                left: 20,
+                                //right: nil,
+                                height: 100,
+                                fixedHeight: true,
+                                width: 100,
+                                fixedWidth: true,
+                                selfView: self)
     }
 
     override func didReceiveMemoryWarning() {
