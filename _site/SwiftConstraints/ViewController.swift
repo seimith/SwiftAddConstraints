@@ -43,6 +43,7 @@ class ViewController: UIViewController {
                                fixedWidth: true, // <=== So, I set this to true
                                selfView: self)
         
+        
         let myGreenUIView = UIView()
         myGreenUIView.backgroundColor = UIColor.green
         self.view.addSubview(myGreenUIView)
@@ -54,8 +55,8 @@ class ViewController: UIViewController {
                                right: -100,
                                height: 100, // <===
                                fixedHeight: true,
-                               //width: 100, // <=== I want flexible width
-                               fixedWidth: false, // <=== I want flexible width
+                               width: 100,
+                               fixedWidth: true,
                                selfView: self)
 
         // ==================================================
